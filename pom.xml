@@ -13,8 +13,8 @@
 	</modules>
 
 	<properties>
-		<serenity.version>1.9.36</serenity.version>
-		<serenity.cucumber.version>1.9.8</serenity.cucumber.version>
+		<serenity.version>2.0.8</serenity.version>
+		<serenity.cucumber.version>1.9.18</serenity.cucumber.version>
 		<parallel.tests>0</parallel.tests>
 	</properties>
 
@@ -24,14 +24,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.22.1</version>
 				<configuration>
-					<argLine>-Djava.awt.headless=true</argLine>
 					<includes>
 						<include>**/*TestSuite.java</include>
 					</includes>
 					<argLine>-Djava.awt.headless=true</argLine>
 					<threadCount>${parallel.tests}</threadCount>
-					<forkCount>${parallel.tests}</forkCount>
 				</configuration>
 				<executions>
 					<execution>
